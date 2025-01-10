@@ -12,7 +12,7 @@ def file_filter(file_path: str) -> bool:
 # Gitからデータを取得
 loader = GitLoader(
     clone_url="https://github.com/langchain-ai/langchain",
-    repo_path="langchain",
+    repo_path="./langchain",
     branch="master",
     file_filter=file_filter,
 )
@@ -44,6 +44,6 @@ chain = {
     "context": retriever
 } | prompt | model | StrOutputParser()
 
-chain.invoke({"question": "LangChainとは？"})
+response = chain.invoke("LangChainとは？")
 
-
+print(response)
