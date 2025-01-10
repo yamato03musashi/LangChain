@@ -16,3 +16,8 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
+
+
+web検索
+Tavily
+https://tavily.com/
